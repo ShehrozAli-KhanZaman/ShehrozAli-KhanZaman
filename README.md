@@ -3,8 +3,8 @@
 - 🌱 I’m currently learning Flask Python
 - 💞️ I’m looking to collaborate on Code More
 - 📫 How to reach me : contact me @ shehrozalikhanzaman@gmail.com
-- 😄 Pronouns: ... 
-- ⚡ Fun fact: ...
+- 😄 Pronouns: ... He/Him
+- ⚡ Fun fact: ... Communication is in every aspect of software engineering
 
 <!---
 ShehrozAli-KhanZaman/ShehrozAli-KhanZaman is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
