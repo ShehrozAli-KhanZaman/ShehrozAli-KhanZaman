@@ -1,6 +1,6 @@
 - 👋 Hi, I’m @ShehrozAli-KhanZaman a Professional Software Engineer
 - 👀 I’m interested in Website , WebApp and Mobile App Development
-- 🌱 I’m currently learning Flask Python
+- 🌱 I’m currently learning Flask Python,NodeJs,ReactJs and React Native
 - 💞️ I’m looking to collaborate on Code More
 - 📫 How to reach me : contact me @ shehrozalikhanzaman@gmail.com
 - 😄 Pronouns: ... He/Him
