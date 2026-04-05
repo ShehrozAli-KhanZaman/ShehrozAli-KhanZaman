@@ -64,20 +64,20 @@ Fleet management system with live tracking, installer workflows & device monitor
 
 <!-- ======================= TECH ======================= -->
 ## 🛠️ Tech Stack
-```bash
+
 React Native | React.js | Node.js | Flask | Python
 Redux Toolkit | REST APIs | MySQL | Mapbox | Firebase
 
 ---
 
 <!-- ======================= CONTACT ======================= -->
-🤝 Let's Connect
+## 🤝 Let's Connect
 <p align="center"> <a href="mailto:shehrozalikhanzaman@gmail.com">📧 Email</a> • <a href="https://www.linkedin.com/in/shehrozali143/">💼 LinkedIn</a> • <a href="https://github.com/ShehrozAli-KhanZaman">🌐 GitHub</a> • <a href="https://wa.me/923184037903">📱 WhatsApp</a> </p>
 
 ---
 
 <!-- ======================= STATS ======================= -->
-📊 GitHub Stats
+## 📊 GitHub Stats
 <p align="center"> <img src="https://github-readme-stats.vercel.app/api?username=ShehrozAli-KhanZaman&show_icons=true&theme=tokyonight&hide_border=true" height="165" /> <img src="https://github-readme-streak-stats.herokuapp.com/?user=ShehrozAli-KhanZaman&theme=tokyonight&hide_border=true" height="165" /> </p>
 
 ---
@@ -90,3 +90,5 @@ He / Him
 ⚡ Fun Fact
 
 Communication is at the heart of great software engineering
+
+```bash
