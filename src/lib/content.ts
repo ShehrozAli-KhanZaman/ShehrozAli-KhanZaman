@@ -1,6 +1,8 @@
 export const person = {
   name: "Shehroz Ali Khan Zaman",
   shortName: "Shehroz",
+  /** Canonical live site (set the same value in Vercel: `NEXT_PUBLIC_SITE_URL`) */
+  portfolioUrl: "https://shehrozali.vercel.app" as const,
   birthDate: "March 23, 2000",
   email: "shehrozalikhanzaman@gmail.com",
   location: "Building products remotely · Astra & collaborators",

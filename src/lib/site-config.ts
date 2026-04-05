@@ -1,6 +1,12 @@
 import { person } from "@/lib/content";
 
-/** Set in production: https://your-domain.com (no trailing slash) */
+/** Documented production URL (see `person.portfolioUrl`). */
+export const canonicalSiteUrl = person.portfolioUrl;
+
+/**
+ * Absolute site origin for metadata, OG, sitemap, JSON-LD.
+ * On Vercel, set `NEXT_PUBLIC_SITE_URL` to `https://shehrozali.vercel.app` (no trailing slash).
+ */
 export function getSiteUrl(): string {
   const explicit = process.env.NEXT_PUBLIC_SITE_URL;
   if (explicit) return explicit.replace(/\/$/, "");

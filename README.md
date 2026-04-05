@@ -4,6 +4,10 @@
 <h3 align="center">🚀 React Native Developer | Software Engineer | Team Lead @ Astra</h3>
 
 <p align="center">
+  <a href="https://shehrozali.vercel.app/"><strong>🌐 Live portfolio</strong></a>
+</p>
+
+<p align="center">
   <img src="https://readme-typing-svg.herokuapp.com?size=22&duration=3000&color=00C2FF&center=true&vCenter=true&width=750&lines=Building+Mobile+Apps+End-to-End;React+Native+%7C+Full+Stack+Developer;Scaling+Apps+%26+APIs;Team+Lead+%40+Astra;Open+to+Collaboration" />
 </p>
 
@@ -72,7 +76,7 @@ Redux Toolkit | REST APIs | MySQL | Mapbox | Firebase
 
 <!-- ======================= CONTACT ======================= -->
 ## 🤝 Let's Connect
-<p align="center"> <a href="mailto:shehrozalikhanzaman@gmail.com">📧 Email</a> • <a href="https://www.linkedin.com/in/shehrozali143/">💼 LinkedIn</a> • <a href="https://github.com/ShehrozAli-KhanZaman">🌐 GitHub</a> • <a href="https://wa.me/923184037903">📱 WhatsApp</a> </p>
+<p align="center"> <a href="https://shehrozali.vercel.app/">🌐 Portfolio</a> • <a href="mailto:shehrozalikhanzaman@gmail.com">📧 Email</a> • <a href="https://www.linkedin.com/in/shehrozali143/">💼 LinkedIn</a> • <a href="https://github.com/ShehrozAli-KhanZaman">🌐 GitHub</a> • <a href="https://wa.me/923184037903">📱 WhatsApp</a> </p>
 
 ---
 
