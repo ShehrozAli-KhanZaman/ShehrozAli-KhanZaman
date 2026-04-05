@@ -3,16 +3,80 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { person } from "@/lib/content";
+import { glowSocialLinkClass } from "@/lib/social-glow";
 import { cn } from "@/lib/utils";
 import emailjs from "@emailjs/browser";
-import { CheckIcon, Loader2Icon, SendIcon } from "lucide-react";
-import { useState } from "react";
+import { CheckIcon, Github, Linkedin, Loader2Icon, Mail, SendIcon } from "lucide-react";
+import { type ReactNode, useState } from "react";
 import { toast } from "react-toastify";
 
 const serviceId ="service_x04mxnf"; // process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
 const templateId ="template_2n9kkmr"; // process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
 const publicKey = "5f4I18g0_6FsEneC9" // process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
 const receiverEmail = "shehrozalikhanzaman@gmail.com" // process.env.NEXT_PUBLIC_RECEIVER_EMAIL;
+
+function WhatsAppGlyph({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" className={className} fill="currentColor" aria-hidden>
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.881 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+    </svg>
+  );
+}
+
+function SocialButtons() {
+  const items: {
+    href: string;
+    label: string;
+    glow: "blue" | "green";
+    node: ReactNode;
+  }[] = [
+    {
+      href: person.social.linkedin,
+      label: "LinkedIn",
+      glow: "blue",
+      node: <Linkedin className="h-6 w-6" strokeWidth={1.5} />,
+    },
+    {
+      href: person.social.github,
+      label: "GitHub",
+      glow: "green",
+      node: <Github className="h-6 w-6" strokeWidth={1.5} />,
+    },
+    {
+      href: person.social.whatsApp,
+      label: "WhatsApp",
+      glow: "green",
+      node: <WhatsAppGlyph className="h-6 w-6" />,
+    },
+    {
+      href: `mailto:${person.email}`,
+      label: "Email",
+      glow: "blue",
+      node: <Mail className="h-6 w-6" strokeWidth={1.5} />,
+    },
+  ];
+
+  return (
+    <div
+      className="flex flex-row flex-wrap items-center justify-center gap-4 sm:gap-5 lg:flex-col lg:gap-5 lg:pt-2"
+      aria-label="Social and contact links"
+    >
+      {items.map(({ href, label, glow, node }) => (
+        <a
+          key={label}
+          href={href}
+          target={href.startsWith("mailto:") ? undefined : "_blank"}
+          rel={href.startsWith("mailto:") ? undefined : "noopener noreferrer"}
+          className={glowSocialLinkClass(glow)}
+          aria-label={label}
+        >
+          {node}
+        </a>
+      ))}
+    </div>
+  );
+}
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -74,7 +138,7 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="relative mx-auto w-full max-w-md">
+    <div className="relative mx-auto w-full max-w-3xl">
       <div className="absolute -left-10 -top-10 h-20 w-20 rounded-full bg-primary/10 blur-xl" />
       <div className="absolute -bottom-10 -right-10 h-20 w-20 rounded-full bg-primary/10 blur-xl" />
 
@@ -98,8 +162,9 @@ export default function ContactForm() {
             </div>
           </div>
         ) : (
-          <form onSubmit={handleSubmit} className="space-y-6">
-            <div className="space-y-4">
+          <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-start lg:gap-12">
+            <form onSubmit={handleSubmit} className="min-w-0 space-y-6">
+              <div className="space-y-4">
               <div
                 className={cn(
                   "relative overflow-hidden rounded-xl border transition-all duration-300",
@@ -208,7 +273,12 @@ export default function ContactForm() {
               <div className="absolute -right-2 -top-2 h-4 w-4 rounded-full bg-primary/30" />
               <div className="absolute -bottom-2 -left-2 h-4 w-4 rounded-full bg-primary/30" />
             </div>
-          </form>
+            </form>
+
+            <aside className="flex justify-center lg:justify-start lg:pl-2">
+              <SocialButtons />
+            </aside>
+          </div>
         )}
       </div>
     </div>
