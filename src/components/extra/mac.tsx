@@ -46,7 +46,7 @@ const Mac = () => {
             <div className="mt-2 flex shrink-0 flex-col items-center gap-3 sm:mt-3">
               <div className="relative h-28 w-28 shrink-0 overflow-hidden rounded-full border border-zinc-600/60 shadow-md ring-2 ring-zinc-700/35">
                 <Image
-                  src="/images/me.png"
+                  src="/images/shehroz.png"
                   alt="Shehroz Ali Khan"
                   fill
                   className="object-cover object-top"
